@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE store [
+  <!ELEMENT store (item)*>
+  <!ELEMENT item (name,dept,price)>
+  <!ATTLIST item type CDATA #REQUIRED>
+  <!ATTLIST item ISBN CDATA #REQUIRED>
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT dept (#PCDATA)>
+  <!ELEMENT price (#PCDATA)>
+]>
+<store>
+  <item type="supplies"  ISBN="2-3631-4">
+    <name>paint</name>
+    <dept>Paints</dept>
+    <price>16.95</price>
+  </item>
+  <item type="supplies"  ISBN="2-3631-5">
+    <name>paint</name>
+    <dept>Paints</dept>
+    <price>16.95</price>
+  </item>
+</store>

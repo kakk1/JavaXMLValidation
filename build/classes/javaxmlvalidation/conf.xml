@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<ValidationCommands xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xmlns:x="urn:testprogramoptions">
+  <!-- START OF SCHEMA -->
+  <xsd:schema targetNamespace="urn:testprogramoptions">
+    <xsd:element name="options">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element name="input_file" type="xsd:string"/>
+          <xsd:element name="ToCount" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute name="command_id" type="xsd:string"/>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <!-- END OF SCHEMA -->
+  <x:options command_id="command_1">
+    <input_file>valid.xml</input_file>
+  </x:options>
+  <x:options command_id="command_2">
+    <input_file>NotValid.xml</input_file>
+    <ToCount>x:options</ToCount>
+  </x:options>
+  <x:options command_id="command_3">
+    <input_file>valid.xml</input_file>
+    <ToCount>x:book</ToCount>
+    <ToCount>description</ToCount>
+    <ToCount>xsd:element</ToCount>
+    <ToCount>catalog</ToCount>
+  </x:options>
+  <x:options command_id="command_4">
+    <input_file>purchaseorder.xml</input_file>
+    <ToCount>quantity</ToCount>
+    <ToCount>description</ToCount>
+    <ToCount>xsd:element</ToCount>
+    <ToCount>catalog</ToCount>
+    <ToCount>comment</ToCount>
+    <ToCount>productName</ToCount>
+    <ToCount>items</ToCount>
+    <ToCount>item</ToCount>
+  </x:options>
+  <x:options command_id="command_5">
+    <input_file>books.xml</input_file>
+    <ToCount>quantity</ToCount>
+    <ToCount>description</ToCount>
+    <ToCount>xsd:element</ToCount>
+    <ToCount>catalog</ToCount>
+  </x:options>
+  <x:options command_id="command_6">
+    <input_file>nn-valid.xml</input_file>
+    <ToCount>quantity</ToCount>
+    <ToCount>description</ToCount>
+    <ToCount>xsd:element</ToCount>
+    <ToCount>catalog</ToCount>
+  </x:options>
+  <x:options command_id="command_6">
+    <input_file>nn-notvalid.xml</input_file>
+    <ToCount>quantity</ToCount>
+    <ToCount>description</ToCount>
+    <ToCount>xsd:element</ToCount>
+    <ToCount>catalog</ToCount>
+  </x:options>
+  <x:options command_id="command_DTD_1">
+    <input_file>itemDTD.xml</input_file>
+    <ToCount>item</ToCount>
+    <ToCount>name</ToCount>
+    <ToCount>price</ToCount>
+    <ToCount>store</ToCount>
+  </x:options>
+  <x:options command_id="command_DTD_2">
+    <input_file>books-well-formed-valid.xml</input_file>
+    <ToCount>item</ToCount>
+    <ToCount>name</ToCount>
+    <ToCount>price</ToCount>
+    <ToCount>store</ToCount>
+  </x:options>
+  <x:options command_id="command_DTD_3">
+    <input_file>books-well-formed-nonvalid.xml</input_file>
+    <ToCount>book</ToCount>
+    <ToCount>item</ToCount>
+    <ToCount>name</ToCount>
+    <ToCount>price</ToCount>
+  </x:options>
+  <x:options command_id="command_DTD_4">
+    <input_file>InlineDTD.xml</input_file>
+    <ToCount>notes</ToCount>
+    <ToCount>note</ToCount>
+    <ToCount>to</ToCount>
+  </x:options>
+</ValidationCommands>
