@@ -77,7 +77,7 @@ public class JavaXMLValidation {
         }
         catch ( IOException ioe )
         {
-            throw ioe;;;
+            throw ioe;
         }
         
         try {
